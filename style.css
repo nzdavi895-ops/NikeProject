@@ -1,0 +1,67 @@
+/* === Transições globais e fonte === */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff;
+  color: #000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* === Posts estilo Instagram / Nike === */
+.post {
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #f2f2f2;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.post:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.postImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.post:hover .postImg {
+  transform: scale(1.08);
+}
+
+/* === Títulos / textos dos posts === */
+.postTitle {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-top: 8px;
+  color: #111;
+}
+
+/* === Grid responsivo === */
+.grid-feed {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .grid-feed {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .grid-feed {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-feed {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patrocinados - Nike Social</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonte estilo Nike -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- JS Modo Escuro -->
+  <script defer src="theme.js"></script>
+</head>
+
+<body class="dark:bg-black dark:text-white bg-white text-black transition font-[Montserrat]">
+
+  <!-- HEADER -->
+  <header class="w-full flex justify-between items-center px-6 py-4 border-b border-gray-300 dark:border-gray-700
+                 backdrop-blur-md bg-white/60 dark:bg-black/40 sticky top-0 z-50">
+
+    <a href="inicio.html" class="text-4xl font-black tracking-tight hover:opacity-70 transition">
+      <span class="text-black dark:text-white drop-shadow-md">NIKE</span>
+    </a>
+
+    <nav class="hidden md:flex gap-8 font-semibold text-sm uppercase tracking-wide">
+      <a href="index.html" class="hover:text-gray-500 transition">Feed</a>
+      <a href="patrocinados.html" class="hover:text-gray-500 transition text-orange-500">Patrocinados</a>
+    </nav>
+
+    <button id="themeToggle" class="px-3 py-1 border rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition">
+      🌙
+    </button>
+  </header>
+
+  <!-- MAIN -->
+  <main class="p-6">
+    <h1 class="text-3xl font-black mb-6 tracking-tight">Patrocinados da Nike</h1>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+      <!-- CRISTIANO RONALDO -->
+      <a href="https://www.instagram.com/cristiano/" target="_blank" class="group block">
+        <div class="overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition">
+          <img src="https://www.shutterstock.com/image-photo/porto-portugal-11-15-2024-600nw-2547123911.jpg"
+               class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
+        </div>
+        <p class="text-lg font-semibold mt-2">Cristiano Ronaldo</p>
+      </a>
+
+      <!-- CORINTHIANS -->
+      <a href="https://www.instagram.com/corinthians/" target="_blank" class="group block">
+        <div class="overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition">
+          <img src="https://imgnike-a.akamaihd.net/strapi/nike/p3_epdp_camisa_III_desktop_7ce271e43c/p3_epdp_camisa_III_desktop_7ce271e43c.jpg"
+               class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
+        </div>
+        <p class="text-lg font-semibold mt-2">Sport Club Corinthians Paulista</p>
+      </a>
+
+      <!-- SELEÇÃO BRASILEIRA -->
+      <a href="https://www.instagram.com/brasil/" target="_blank" class="group block">
+        <div class="overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition">
+          <img src="https://imgnike-a.akamaihd.net/360x360/0584200LA17.jpg"
+               class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
+        </div>
+        <p class="text-lg font-semibold mt-2">Seleção Brasileira</p>
+      </a>
+
+      <!-- RONALDINHO -->
+      <a href="https://www.instagram.com/ronaldinho/" target="_blank" class="group block">
+        <div class="overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition">
+          <img src="https://imgnike-a.akamaihd.net/360x360/05899215A7.jpg"
+               class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
+        </div>
+        <p class="text-lg font-semibold mt-2">Ronaldinho Gaúcho</p>
+      </a>
+
+    </div>
+  </main>
+
+</body>
+</html>
