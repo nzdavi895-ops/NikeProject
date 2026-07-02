@@ -5,97 +5,115 @@ body {
   font-family: 'Montserrat', sans-serif;
   background-color: #ffffff;
   color: #000000;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  /* Transição mais suave (cubic-bezier) usada em interfaces premium */
+  transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
+              color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: -0.02em; /* Texto ligeiramente mais compacto estilo Nike */
 }
 
-/* Suporte ao Modo Escuro quando a classe .dark estiver no HTML */
+/* Suporte ao Modo Escuro */
 html.dark body {
   background-color: #000000;
   color: #ffffff;
 }
 
 /* ==========================================
-   2. CARDS DE POSTS (ESTILO INSTAGRAM/NIKE)
+   2. CARDS DE POSTS (PREMIUM NIKE STYLE)
    ========================================== */
 .post {
-  border-radius: 16px;
+  position: relative;
+  border-radius: 12px; /* Reduzi de 16px para 12px: bordas mais secas passam um ar mais moderno e esportivo */
   overflow: hidden;
-  background-color: #f2f2f2;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  background-color: #f5f5f5;
+  /* Sombra inicial quase invisível, estilo minimalista */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03); 
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), 
+              box-shadow 0.6s cubic-bezier(0.25, 1, 0.5, 1), 
+              background-color 0.5s ease;
   cursor: pointer;
 }
 
 /* Ajuste do fundo do card no Modo Escuro */
 html.dark .post {
-  background-color: #171717; /* Cinza escuro (neutral-900) */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  background-color: #111111; /* Preto puro secundário */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Efeito de Elevação e Brilho no Hover */
 .post:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px) scale(1.01); /* Sobe de leve em vez de só crescer */
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
 }
 
 html.dark .post:hover {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 20px 35px rgba(255, 255, 255, 0.05); /* Sombra clara sutil no dark mode */
 }
 
 /* ==========================================
-   3. IMAGENS DOS POSTS
+   3. IMAGENS E OVERLAYS (O SEGREDO VISUAL)
    ========================================== */
 .postImg {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.3s ease;
+  filter: grayscale(10%) contrast(105%); /* Leve estilo dramático nas fotos */
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), 
+              filter 0.5s ease;
 }
 
+/* Filtro de cor e Zoom quando passa o mouse */
 .post:hover .postImg {
-  transform: scale(1.08);
+  transform: scale(1.05);
+  filter: grayscale(0%) contrast(110%); /* Revela a cor total no foco */
+}
+
+/* Opcional: Adiciona uma película escura suave por cima da imagem */
+.post::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 50%);
+  opacity: 1;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.post:hover::after {
+  opacity: 0.4; /* Escurece um pouquinho a base do card no hover para dar profundidade */
 }
 
 /* ==========================================
-   4. TEXTOS DOS POSTS
+   4. TEXTOS DOS POSTS (CAIXA ALTA E NEGRITO)
    ========================================== */
 .postTitle {
-  font-weight: 700;
-  font-size: 1.1rem;
-  margin-top: 8px;
-  color: #111111;
+  font-weight: 900; /* Peso máximo para o padrão Nike de títulos */
+  text-transform: uppercase; /* Força os títulos a ficarem em Caixa Alta */
+  font-size: 1.2rem;
+  letter-spacing: -0.03em;
+  margin-top: 12px;
+  color: #000000;
   transition: color 0.3s ease;
 }
 
 html.dark .postTitle {
-  color: #eeeeee;
+  color: #ffffff;
+}
+
+/* Detalhe de linha decorativa que surge abaixo do texto do card ativo */
+.group:hover .postTitle {
+  color: #ff5500; /* Laranja Pulse da Nike ao interagir */
 }
 
 /* ==========================================
-   5. GRID RESPONSIVO 
-   (Dica: Você já faz isso com Tailwind no HTML, 
-   mas mantive aqui caso use a classe .grid-feed)
+   5. GRID RESPONSIVO
    ========================================== */
 .grid-feed {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: 1.5rem;
+  gap: 2rem; /* Aumentei o espaçamento para o layout "respirar" mais */
 }
 
-@media (min-width: 640px) {
-  .grid-feed {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 768px) {
-  .grid-feed {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .grid-feed {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
+@media (min-width: 640px) { .grid-feed { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 768px) { .grid-feed { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 1024px) { .grid-feed { grid-template-columns: repeat(4, 1fr); } }
