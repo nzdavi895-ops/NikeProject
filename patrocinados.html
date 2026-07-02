@@ -5,79 +5,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Patrocinados - Nike Social</title>
 
-  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
 
-  <!-- Fonte estilo Nike -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
 
-  <!-- CSS externo -->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- JS Modo Escuro -->
   <script defer src="theme.js"></script>
 </head>
 
-<body class="dark:bg-black dark:text-white bg-white text-black transition font-[Montserrat]">
+<body class="bg-white dark:bg-black text-black dark:text-white font-[Montserrat] antialiased transition-colors duration-300">
 
-  <!-- HEADER -->
-  <header class="w-full flex justify-between items-center px-6 py-4 border-b border-gray-300 dark:border-gray-700
-                 backdrop-blur-md bg-white/60 dark:bg-black/40 sticky top-0 z-50">
+  <header class="w-full flex justify-between items-center px-6 py-4 border-b border-gray-300 dark:border-gray-700 backdrop-blur-md bg-white/60 dark:bg-black/40 sticky top-0 z-50">
 
     <a href="inicio.html" class="text-4xl font-black tracking-tight hover:opacity-70 transition">
       <span class="text-black dark:text-white drop-shadow-md">NIKE</span>
     </a>
 
     <nav class="hidden md:flex gap-8 font-semibold text-sm uppercase tracking-wide">
-      <a href="index.html" class="hover:text-gray-500 transition">Feed</a>
-      <a href="patrocinados.html" class="hover:text-gray-500 transition text-orange-500">Patrocinados</a>
+      <a href="index.html" class="text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition">Feed</a>
+      <a href="patrocinados.html" class="text-orange-500 transition hover:text-orange-400">Patrocinados</a>
     </nav>
 
-    <button id="themeToggle" class="px-3 py-1 border rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition">
+    <button id="themeToggle" class="px-3 py-1 border border-gray-300 dark:border-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition" aria-label="Alternar tema">
       🌙
     </button>
   </header>
 
-  <!-- MAIN -->
-  <main class="p-6">
-    <h1 class="text-3xl font-black mb-6 tracking-tight">Patrocinados da Nike</h1>
+  <main class="max-w-6xl mx-auto px-4 md:px-6 py-10">
+    
+    <h1 class="text-4xl font-black mb-10 tracking-tight">
+      Patrocinados da Nike
+    </h1>
 
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
 
-      <!-- CRISTIANO RONALDO -->
       <a href="https://www.instagram.com/cristiano/" target="_blank" class="group block">
-        <div class="overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition">
-          <img src="https://www.shutterstock.com/image-photo/porto-portugal-11-15-2024-600nw-2547123911.jpg"
-               class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
+        <div class="overflow-hidden rounded-2xl bg-gray-100 dark:bg-neutral-900 shadow-lg hover:shadow-2xl transition h-44">
+          <img src="https://www.shutterstock.com/image-photo/porto-portugal-11-15-2024-600nw-2547123911.jpg" alt="Cristiano Ronaldo" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
         </div>
-        <p class="text-lg font-semibold mt-2">Cristiano Ronaldo</p>
+        <p class="text-lg font-bold mt-3 tracking-tight group-hover:text-orange-500 transition">Cristiano Ronaldo</p>
       </a>
 
-      <!-- CORINTHIANS -->
       <a href="https://www.instagram.com/corinthians/" target="_blank" class="group block">
-        <div class="overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition">
-          <img src="https://imgnike-a.akamaihd.net/strapi/nike/p3_epdp_camisa_III_desktop_7ce271e43c/p3_epdp_camisa_III_desktop_7ce271e43c.jpg"
-               class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
+        <div class="overflow-hidden rounded-2xl bg-gray-100 dark:bg-neutral-900 shadow-lg hover:shadow-2xl transition h-44">
+          <img src="https://imgnike-a.akamaihd.net/strapi/nike/p3_epdp_camisa_III_desktop_7ce271e43c/p3_epdp_camisa_III_desktop_7ce271e43c.jpg" alt="Corinthians" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
         </div>
-        <p class="text-lg font-semibold mt-2">Sport Club Corinthians Paulista</p>
+        <p class="text-lg font-bold mt-3 tracking-tight group-hover:text-orange-500 transition">S.C. Corinthians Paulista</p>
       </a>
 
-      <!-- SELEÇÃO BRASILEIRA -->
       <a href="https://www.instagram.com/brasil/" target="_blank" class="group block">
-        <div class="overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition">
-          <img src="https://imgnike-a.akamaihd.net/360x360/0584200LA17.jpg"
-               class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
+        <div class="overflow-hidden rounded-2xl bg-gray-100 dark:bg-neutral-900 shadow-lg hover:shadow-2xl transition h-44">
+          <img src="https://imgnike-a.akamaihd.net/360x360/0584200LA17.jpg" alt="Seleção Brasileira" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
         </div>
-        <p class="text-lg font-semibold mt-2">Seleção Brasileira</p>
+        <p class="text-lg font-bold mt-3 tracking-tight group-hover:text-orange-500 transition">Seleção Brasileira</p>
       </a>
 
-      <!-- RONALDINHO -->
       <a href="https://www.instagram.com/ronaldinho/" target="_blank" class="group block">
-        <div class="overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition">
-          <img src="https://imgnike-a.akamaihd.net/360x360/05899215A7.jpg"
-               class="w-full h-44 object-cover group-hover:scale-105 transition duration-300">
+        <div class="overflow-hidden rounded-2xl bg-gray-100 dark:bg-neutral-900 shadow-lg hover:shadow-2xl transition h-44">
+          <img src="https://imgnike-a.akamaihd.net/360x360/05899215A7.jpg" alt="Ronaldinho Gaúcho" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
         </div>
-        <p class="text-lg font-semibold mt-2">Ronaldinho Gaúcho</p>
+        <p class="text-lg font-bold mt-3 tracking-tight group-hover:text-orange-500 transition">Ronaldinho Gaúcho</p>
       </a>
 
     </div>
