@@ -6,12 +6,11 @@
   <title>Nike Social - Feed</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
-
-<script>
-  tailwind.config = {
-    darkMode: 'class',
-  }
-</script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
 
@@ -20,11 +19,11 @@
   <script defer src="theme.js"></script>
 </head>
 
-<body class="bg-white dark:bg-black text-black dark:text-white font-[Montserrat] antialiased">
+<body class="bg-white dark:bg-black text-black dark:text-white font-[Montserrat] antialiased transition-colors duration-300">
 
   <header class="w-full flex justify-between items-center px-6 py-4 border-b border-gray-300 dark:border-gray-700 backdrop-blur-md bg-white/60 dark:bg-black/40 sticky top-0 z-50">
-    <a href="inicio.html" class="text-3xl font-black tracking-tight hover:opacity-70 transition">
-      <span class="text-orange-500 dark:text-white drop-shadow-md">NIKE</span>
+    <a href="inicio.html" class="text-4xl font-black tracking-tight hover:opacity-70 transition">
+      <span class="text-black dark:text-white drop-shadow-md">NIKE</span>
     </a>
 
     <nav class="hidden md:flex gap-8 font-semibold text-sm uppercase tracking-wide">
@@ -37,70 +36,99 @@
     </button>
   </header>
 
-  <main class="max-w-5xl mx-auto px-4 md:px-6 py-10">
+  <main class="max-w-6xl mx-auto px-4 md:px-6 py-10">
 
-    <h1 class="text-4xl font-black mb-10 tracking-tight">
+    <h1 class="text-4xl font-black mb-10 tracking-tight uppercase">
       Feed da Loja
     </h1>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+    <div class="grid-feed">
 
-      <a href="https://www.nike.com.br/tenis-nike-air-force-1-07-masculino-011137.html?cor=51&_c412=45" target="_blank" class="group block">
-        <div class="overflow-hidden rounded-2xl bg-gray-100 dark:bg-neutral-900 shadow-lg hover:shadow-2xl transition h-72">
-          <img src="https://imgnike-a.akamaihd.net/360x360/01113751A2.jpg" alt="Air Force 1" class="postImg w-full h-full object-cover group-hover:scale-105 transition duration-300">
+      <a href="https://www.nike.com.br/tenis-nike-air-force-1-07-masculino-011137.html?cor=51&_c412=45" target="_blank" class="group block post">
+        <div class="overflow-hidden h-72">
+          <img src="https://imgnike-a.akamaihd.net/360x360/01113751A2.jpg" alt="Air Force 1" class="postImg">
+        </div>
+        <div class="p-4">
+          <p class="postTitle">Air Force 1 '07</p>
         </div>
       </a>
 
-      <a href="https://www.nike.com.br/camisa-nike-atletico-de-madrid-i-2025-26-torcedor-pro-masculina-058368.html?cor=MT" target="_blank" class="group block">
-        <div class="overflow-hidden rounded-2xl bg-gray-100 dark:bg-neutral-900 shadow-lg hover:shadow-2xl transition h-72">
-          <img src="https://imgnike-a.akamaihd.net/360x360/058368MTA4.jpg" alt="Camisa Atlético de Madrid" class="postImg w-full h-full object-cover group-hover:scale-105 transition duration-300">
+      <a href="https://www.nike.com.br/camisa-nike-atletico-de-madrid-i-2025-26-torcedor-pro-masculina-058368.html?cor=MT" target="_blank" class="group block post">
+        <div class="overflow-hidden h-72">
+          <img src="https://imgnike-a.akamaihd.net/360x360/058368MTA4.jpg" alt="Camisa Atlético de Madrid" class="postImg">
+        </div>
+        <div class="p-4">
+          <p class="postTitle">Atlético de Madrid I 25/26</p>
         </div>
       </a>
 
-      <a href="https://www.nike.com.br/chuteira-nike-premier-3-society-028829.html?cor=ID" target="_blank" class="group block">
-        <div class="overflow-hidden rounded-2xl bg-gray-100 dark:bg-neutral-900 shadow-lg hover:shadow-2xl transition h-72">
-          <img src="https://imgnike-a.akamaihd.net/360x360/028829IDA2.jpg" alt="Chuteira Nike Premier" class="postImg w-full h-full object-cover group-hover:scale-105 transition duration-300">
+      <a href="https://www.nike.com.br/chuteira-nike-premier-3-society-028829.html?cor=ID" target="_blank" class="group block post">
+        <div class="overflow-hidden h-72">
+          <img src="https://imgnike-a.akamaihd.net/360x360/028829IDA2.jpg" alt="Chuteira Nike Premier" class="postImg">
+        </div>
+        <div class="p-4">
+          <p class="postTitle">Chuteira Premier 3 Society</p>
         </div>
       </a>
 
-      <a href="https://www.nike.com.br/camisa-brasil-nike-i-2026-27-torcedor-pro-masculina-109772.html?cor=00" target="_blank" class="group block">
-        <div class="overflow-hidden rounded-2xl bg-gray-100 dark:bg-neutral-900 shadow-lg hover:shadow-2xl transition h-72">
-          <img src="https://imgnike-a.akamaihd.net/360x360/10977200A4.jpg" alt="Camisa do Brasil" class="postImg w-full h-full object-cover group-hover:scale-105 transition duration-300">
+      <a href="https://www.nike.com.br/camisa-brasil-nike-i-2026-27-torcedor-pro-masculina-109772.html?cor=00" target="_blank" class="group block post">
+        <div class="overflow-hidden h-72">
+          <img src="https://imgnike-a.akamaihd.net/360x360/10977200A4.jpg" alt="Camisa do Brasil" class="postImg">
+        </div>
+        <div class="p-4">
+          <p class="postTitle">Camisa Brasil I 2026/27</p>
         </div>
       </a>
 
-      <a href="https://www.nike.com.br/camisa-barcelona-nike-i-202526-torcedor-pro-masculina-074831.html?cor=15" target="_blank" class="group block">
-        <div class="overflow-hidden rounded-2xl bg-gray-100 dark:bg-neutral-900 shadow-lg hover:shadow-2xl transition h-72">
-          <img src="https://imgnike-a.akamaihd.net/360x360/07483115A2.jpg" alt="Camisa Barcelona" class="postImg w-full h-full object-cover group-hover:scale-105 transition duration-300">
+      <a href="https://www.nike.com.br/camisa-barcelona-nike-i-202526-torcedor-pro-masculina-074831.html?cor=15" target="_blank" class="group block post">
+        <div class="overflow-hidden h-72">
+          <img src="https://imgnike-a.akamaihd.net/360x360/07483115A2.jpg" alt="Camisa Barcelona" class="postImg">
+        </div>
+        <div class="p-4">
+          <p class="postTitle">Camisa Barcelona I 25/26</p>
         </div>
       </a>
 
-      <a href="https://www.nike.com.br/jaqueta-nike-sportswear-woven-feminina-029753.html?cor=P2" target="_blank" class="group block">
-        <div class="overflow-hidden rounded-2xl bg-gray-100 dark:bg-neutral-900 shadow-lg hover:shadow-2xl transition h-72">
-          <img src="https://imgnike-a.akamaihd.net/360x360/029753P2A2.jpg" alt="Jaqueta Nike" class="postImg w-full h-full object-cover group-hover:scale-105 transition duration-300">
+      <a href="https://www.nike.com.br/jaqueta-nike-sportswear-woven-feminina-029753.html?cor=P2" target="_blank" class="group block post">
+        <div class="overflow-hidden h-72">
+          <img src="https://imgnike-a.akamaihd.net/360x360/029753P2A2.jpg" alt="Jaqueta Nike" class="postImg">
+        </div>
+        <div class="p-4">
+          <p class="postTitle">Jaqueta Woven Feminina</p>
         </div>
       </a>
 
-      <a href="https://www.nike.com.br/camiseta-nike-total-90-energy-masculina-059400.html?cor=ID" target="_blank" class="group block">
-        <div class="overflow-hidden rounded-2xl bg-gray-100 dark:bg-neutral-900 shadow-lg hover:shadow-2xl transition h-72">
-          <img src="https://imgnike-a.akamaihd.net/360x360/059400IDA9.jpg" alt="Camiseta Total 90" class="postImg w-full h-full object-cover group-hover:scale-105 transition duration-300">
+      <a href="https://www.nike.com.br/camiseta-nike-total-90-energy-masculina-059400.html?cor=ID" target="_blank" class="group block post">
+        <div class="overflow-hidden h-72">
+          <img src="https://imgnike-a.akamaihd.net/360x360/059400IDA9.jpg" alt="Camiseta Total 90" class="postImg">
+        </div>
+        <div class="p-4">
+          <p class="postTitle">Camiseta Total 90 Energy</p>
         </div>
       </a>
 
-      <a href="https://www.nike.com.br/bola-nike-cbf-society-078250.html?cor=51" target="_blank" class="group block">
-        <div class="overflow-hidden rounded-2xl bg-gray-100 dark:bg-neutral-900 shadow-lg hover:shadow-2xl transition h-72">
-          <img src="https://imgnike-a.akamaihd.net/360x360/07825051A2.jpg" alt="Bola Nike CBF" class="postImg w-full h-full object-cover group-hover:scale-105 transition duration-300">
+      <a href="https://www.nike.com.br/bola-nike-cbf-society-078250.html?cor=51" target="_blank" class="group block post">
+        <div class="overflow-hidden h-72">
+          <img src="https://imgnike-a.akamaihd.net/360x360/07825051A2.jpg" alt="Bola Nike CBF" class="postImg">
+        </div>
+        <div class="p-4">
+          <p class="postTitle">Bola CBF Society</p>
         </div>
       </a>
 
-      <a href="https://www.nike.com.br/nike-gato-098496.html?cor=IF" target="_blank" class="group block">
-        <div class="overflow-hidden rounded-2xl bg-gray-100 dark:bg-neutral-900 shadow-lg hover:shadow-2xl transition h-72">
-          <img src="https://imgnike-a.akamaihd.net/360x360/098496IFA1.jpg" alt="Nike Gato" class="postImg w-full h-full object-cover group-hover:scale-105 transition duration-300">
+      <a href="https://www.nike.com.br/nike-gato-098496.html?cor=IF" target="_blank" class="group block post">
+        <div class="overflow-hidden h-72">
+          <img src="https://imgnike-a.akamaihd.net/360x360/098496IFA1.jpg" alt="Nike Gato" class="postImg">
+        </div>
+        <div class="p-4">
+          <p class="postTitle">Nike Gato Futsal</p>
         </div>
       </a>
 
     </div>
   </main>
 
+</body>
+</html>
 </body>
 </html>
