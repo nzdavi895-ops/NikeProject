@@ -1,26 +1,49 @@
-/* === Transições globais e fonte === */
+/* ==========================================
+   1. CONFIGURAÇÕES GLOBAIS E TRANSIÇÕES
+   ========================================== */
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: #fff;
-  color: #000;
+  background-color: #ffffff;
+  color: #000000;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* === Posts estilo Instagram / Nike === */
+/* Suporte ao Modo Escuro quando a classe .dark estiver no HTML */
+html.dark body {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* ==========================================
+   2. CARDS DE POSTS (ESTILO INSTAGRAM/NIKE)
+   ========================================== */
 .post {
   border-radius: 16px;
   overflow: hidden;
   background-color: #f2f2f2;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   cursor: pointer;
 }
 
-.post:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+/* Ajuste do fundo do card no Modo Escuro */
+html.dark .post {
+  background-color: #171717; /* Cinza escuro (neutral-900) */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
+.post:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+html.dark .post:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+}
+
+/* ==========================================
+   3. IMAGENS DOS POSTS
+   ========================================== */
 .postImg {
   width: 100%;
   height: 100%;
@@ -33,15 +56,26 @@ body {
   transform: scale(1.08);
 }
 
-/* === Títulos / textos dos posts === */
+/* ==========================================
+   4. TEXTOS DOS POSTS
+   ========================================== */
 .postTitle {
   font-weight: 700;
   font-size: 1.1rem;
   margin-top: 8px;
-  color: #111;
+  color: #111111;
+  transition: color 0.3s ease;
 }
 
-/* === Grid responsivo === */
+html.dark .postTitle {
+  color: #eeeeee;
+}
+
+/* ==========================================
+   5. GRID RESPONSIVO 
+   (Dica: Você já faz isso com Tailwind no HTML, 
+   mas mantive aqui caso use a classe .grid-feed)
+   ========================================== */
 .grid-feed {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
